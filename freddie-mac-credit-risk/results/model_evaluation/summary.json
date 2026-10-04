@@ -1,0 +1,120 @@
+{
+  "n_loans": 250000,
+  "duplicate_loan_ids": 0,
+  "default_rate_overall": 0.090456,
+  "default_count": 22614,
+  "outcomes": {
+    "Prepaid": 199965,
+    "Active/Other": 27421,
+    "Default": 22614
+  },
+  "missing": {
+    "fico": 137,
+    "ltv": 12,
+    "dti": 7270,
+    "orig_rate": 0,
+    "orig_upb": 0,
+    "orig_term": 0,
+    "num_borrowers": 65,
+    "mi_pct": 0,
+    "cltv": 14
+  },
+  "first_time_buyer_not_available": 49,
+  "msa_blank": 40395,
+  "corr_ltv_cltv": 0.9538502912172662,
+  "ltv_over_100": 486,
+  "ltv_over_100_by_vintage": {
+    "2006": 1,
+    "2015": 484,
+    "2019": 1
+  },
+  "ltv_over_100_default_rate": 0.10699588477366255,
+  "share_one_unit": 0.977064,
+  "severity_n": 9940,
+  "severity_median": 0.5184649462306419,
+  "severity_below_0": 201,
+  "severity_above_1": 815,
+  "median_by_outcome": {
+    "0": {
+      "fico": 753.0,
+      "ltv": 77.0,
+      "dti": 36.0,
+      "orig_rate": 5.75
+    },
+    "1": {
+      "fico": 691.0,
+      "ltv": 80.0,
+      "dti": 41.0,
+      "orig_rate": 6.375
+    }
+  },
+  "train_n": 200000,
+  "test_n": 50000,
+  "test_default_rate": 0.09046,
+  "best_params": {
+    "Logistic Regression": {
+      "C": 0.1
+    },
+    "Gradient Boosting": {
+      "min_samples_leaf": 100,
+      "max_leaf_nodes": 63,
+      "learning_rate": 0.05,
+      "l2_regularization": 5.0
+    }
+  },
+  "best_cv_auc": {
+    "Logistic Regression": 0.8411681347846885,
+    "Gradient Boosting": 0.8475247413684613
+  },
+  "auc_diff_gb_minus_lr": {
+    "mean": 0.0055006337614933315,
+    "ci95": [
+      0.0034058054311438156,
+      0.007499788645812768
+    ]
+  },
+  "threshold": 0.5599999999999999,
+  "confusion_matrix": {
+    "TN": 36695,
+    "FP": 8782,
+    "FN": 1231,
+    "TP": 3292
+  },
+  "at_threshold": {
+    "accuracy": 0.79974,
+    "precision": 0.2726519794599967,
+    "recall": 0.7278355074065885,
+    "flagged_share": 0.24148
+  },
+  "loss_caught_vs_missed": {
+    "caught_realized_loss": 151685028.76,
+    "missed_realized_loss": 24732930.5
+  },
+  "top_decile_share_of_defaults": 0.44174220650011053,
+  "top_two_deciles_share_of_defaults": 0.6707937209816494,
+  "results": {
+    "Baseline: predict no default": {
+      "AUC": 0.5,
+      "PR_AUC": 0.09046,
+      "accuracy": 0.90954,
+      "recall": 0.0
+    },
+    "Baseline: credit score only": {
+      "AUC": 0.7525898626595818,
+      "PR_AUC": 0.2323295928551925
+    },
+    "Logistic Regression (tuned)": {
+      "AUC": 0.8422663073555083,
+      "PR_AUC": 0.36491838323940606
+    },
+    "Gradient Boosting (tuned)": {
+      "AUC": 0.8476886643070178,
+      "PR_AUC": 0.39022250612913234,
+      "accuracy": 0.79974,
+      "precision": 0.2726519794599967,
+      "recall": 0.7278355074065885,
+      "flagged_share": 0.24148
+    }
+  },
+  "runtime_seconds": 633
+}

@@ -1,0 +1,5 @@
+,AUC,PR_AUC,accuracy,recall,precision,flagged_share
+Baseline: predict no default,0.5,0.09046,0.90954,0.0,,
+Baseline: credit score only,0.7525898626595818,0.2323295928551925,,,,
+Logistic Regression (tuned),0.8422663073555083,0.36491838323940606,,,,
+Gradient Boosting (tuned),0.8476886643070178,0.39022250612913234,0.79974,0.7278355074065885,0.2726519794599967,0.24148

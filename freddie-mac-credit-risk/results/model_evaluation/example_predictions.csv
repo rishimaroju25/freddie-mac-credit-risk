@@ -1,0 +1,4 @@
+risk_percentile,predicted_score,fico,ltv,dti,orig_rate,purpose,state,vintage,num_borrowers,actual_default
+5,0.024812204344602455,769.0,63.0,22.0,5.5,N,KY,2008,2.0,0
+50,0.24667114479914504,755.0,78.0,44.0,4.0,C,IL,2015,1.0,0
+99,0.9150223091288863,636.0,92.0,37.0,7.125,N,AL,2007,1.0,1

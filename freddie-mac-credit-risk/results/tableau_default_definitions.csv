@@ -1,0 +1,16 @@
+vintage,definition,rate
+2006,Naive 90+ DPD (incl. forbearance),0.1443
+2007,Naive 90+ DPD (incl. forbearance),0.1653
+2008,Naive 90+ DPD (incl. forbearance),0.0934
+2015,Naive 90+ DPD (incl. forbearance),0.041
+2019,Naive 90+ DPD (incl. forbearance),0.05572
+2006,90+ DPD excl. forbearance (model target),0.14336
+2007,90+ DPD excl. forbearance (model target),0.1637
+2008,90+ DPD excl. forbearance (model target),0.09218
+2015,90+ DPD excl. forbearance (model target),0.02548
+2019,90+ DPD excl. forbearance (model target),0.02756
+2006,Strict: ended in credit-loss event,0.08138
+2007,Strict: ended in credit-loss event,0.08968
+2008,Strict: ended in credit-loss event,0.0427
+2015,Strict: ended in credit-loss event,0.00272
+2019,Strict: ended in credit-loss event,0.00098
