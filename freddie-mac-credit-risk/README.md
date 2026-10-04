@@ -7,7 +7,7 @@ sample from Freddie Mac's Single-Family Loan-Level Dataset (50,000 loans per ori
 
 **Tools:** Python (pandas, scikit-learn, matplotlib), Tableau
 
-**Full write-up:** [PORTFOLIO_POST.md](PORTFOLIO_POST.md) covers the problem, data exploration,
+**Full write-up:** [PORTFOLIO_POST.md](freddie-mac-credit-risk/PORTFOLIO_POST.md) covers the problem, data exploration,
 preparation, baselines, tuning, evaluation, interpretation, ethics, references, and AI disclosure.
 
 ## Key findings
@@ -28,7 +28,7 @@ preparation, baselines, tuning, evaluation, interpretation, ethics, references, 
    severity of 43% versus 58%. This is consistent with mortgage insurance absorbing part of the
    loss on high-LTV loans, but the analysis does not test that directly.
 
-![How the default definition changes the story](figures/default_definitions.png)
+![How the default definition changes the story](freddie-mac-credit-risk/figures/default_definitions.png)
 
 ## Research question
 
@@ -52,7 +52,7 @@ performance data through March 31, 2026.
 | 2015 | Post-crisis underwriting with about ten years of history |
 | 2019 | Pre-pandemic loans, which exposes the effect of COVID forbearance |
 
-The raw files are not included in this repo. See [`data/README.md`](data/README.md) for how to
+The raw files are not included in this repo. See [`data/README.md`](freddie-mac-credit-risk/data/README.md) for how to
 download them.
 
 ## Method
@@ -123,11 +123,11 @@ credit score (0.081), interest rate (0.053), LTV (0.035), state (0.031), number 
 priced in and partly the rate environment of the origination year, so it is not a pure borrower
 risk signal. The highest-risk states in the logistic model were Nevada, Florida, and Arizona.
 
-![Default rate by credit score and loan-to-value](figures/fico_ltv_heatmap.png)
+![Default rate by credit score and loan-to-value](freddie-mac-credit-risk/figures/fico_ltv_heatmap.png)
 
 ### Loss by CRT-style LTV tier
 
-![High-LTV loans default more often but lose less per default](figures/crt_tiers.png)
+![High-LTV loans default more often but lose less per default](freddie-mac-credit-risk/figures/crt_tiers.png)
 
 Across all 9,940 loss events, the median loss was about 52% of the balance at termination.
 
@@ -160,10 +160,10 @@ so they aren't meant to add up to 100. For example, 27.1% in the top-left heatma
 
 ```bash
 pip install -r requirements.txt
-# put the unzipped sample files in data/raw/ (see data/README.md)
-python src/run_analysis.py 2006 2007 2008 2015 2019   # a few minutes; writes results/
-python src/model_evaluation.py                         # about 10 minutes; baselines, tuning, evaluation
-python src/make_figures.py                             # writes figures/ from results/
+# put the unzipped sample files in freddie-mac-credit-risk/data/raw/ (see data/README.md)
+python freddie-mac-credit-risk/src/run_analysis.py 2006 2007 2008 2015 2019   # a few minutes; writes results/
+python freddie-mac-credit-risk/src/model_evaluation.py                         # about 10 minutes; baselines, tuning, evaluation
+python freddie-mac-credit-risk/src/make_figures.py                             # writes figures/ from results/
 ```
 
 Random seeds are fixed, and re-running the pipeline reproduced identical files in `results/`.
